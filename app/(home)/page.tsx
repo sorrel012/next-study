@@ -1,14 +1,13 @@
 import Link from 'next/link';
+import { API_URL } from '../../util/constant';
 
 export const metadata = {
   title: 'Home',
 };
 
-export const URL = 'https://nomad-movies.nomadcoders.workers.dev/movies';
-
 async function getMovies() {
   await new Promise((resolve) => setTimeout(resolve, 1000));
-  const response = await fetch(URL);
+  const response = await fetch(API_URL);
   return await response.json();
 }
 
