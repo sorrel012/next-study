@@ -18,11 +18,7 @@ function Tomato() {
     getMovies();
   }, []);
 
-  return (
-    <div>
-      <h1>Home</h1>
-    </div>
-  );
+  return <div>{isLoading ? 'Loading...' : JSON.stringify(movies)}</div>;
 }
 
 export default Tomato;
